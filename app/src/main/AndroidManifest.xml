@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.huangxinhui.erpapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="designwidth"
+            android:value="1080" />
+        <meta-data
+            android:name="designdpi"
+            android:value="480" />
+        <meta-data
+            android:name="fontsize"
+            android:value="1.0" />
+        <meta-data
+            android:name="unit"
+            android:value="dp" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Function.QueryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Information.QueryInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Function.ReceiveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Information.ReceiveInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Function.OutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Information.OutInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Function.IntoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Information.IntoInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Function.MoveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Information.MoveInformationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Information.WarrantyActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Permission.PermissionsActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 安装apk 7.0所需 -->
+        <provider
+            android:name=".Util.MyProvide"
+            android:authorities="com.example.huangxinhui.erpapp.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>
