@@ -18,8 +18,9 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class HomeActivity extends AppCompatActivity {
-//A180700002      18B606163
+    //A180700002      18B606163
     private String code = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.out:
                 Bundle bundle = new Bundle();
-                bundle.putString("code",code);
+                bundle.putString("code", code);
                 intent = new Intent(this, OutActivity.class);
                 intent.putExtras(bundle);
                 break;
