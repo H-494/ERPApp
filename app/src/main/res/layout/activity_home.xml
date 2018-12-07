@@ -103,7 +103,7 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:text="钢坯出库"
+                    android:text="调拨出库"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -126,7 +126,7 @@
                     android:layout_marginTop="10dp"
                     android:gravity="center"
                     android:textSize="16sp"
-                    android:text="钢坯入库"
+                    android:text="调拨入库"
                     android:textColor="@color/colorPrimary"
                     android:textStyle="bold" />
             </LinearLayout>
