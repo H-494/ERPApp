@@ -198,8 +198,10 @@ public class LoginActivity extends AppCompatActivity {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
                                             String url = version.getUrl();
+                                            Log.i("data",url);
+
 //                                        String url = "gdown.baidu.com/data/wisegame/fd84b7f6746f0b18/baiduyinyue_4802.apk";
-                                            new Thread(new DownLoadRunnable(LoginActivity.this, "http://" + url, "产销ERP", 0, handler)).start();
+                                            new Thread(new DownLoadRunnable(LoginActivity.this,  url, "产销ERP", 0, handler)).start();
                                         }
                                     }).setNegativeButton("否", new DialogInterface.OnClickListener() {
                                 @Override
